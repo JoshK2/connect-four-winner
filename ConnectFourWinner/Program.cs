@@ -16,6 +16,8 @@ namespace ConnectFourWinner
                 { 0, 0, 0, 1, 0, 0, 0}
             };
             PrintMatrix(matrix);
+            int winner = WinnerCalc(matrix, 5, 3);
+            Console.WriteLine("the winner is: " + winner);
         }
 
         //standar rows is 6, and columns is 7
@@ -32,8 +34,6 @@ namespace ConnectFourWinner
                 }
                 Console.WriteLine(str);
             }
-            int winner = WinnerCalc(matrix, 5, 3);
-            Console.WriteLine("the winner is: " + winner);
         }
 
         /// <summary>
