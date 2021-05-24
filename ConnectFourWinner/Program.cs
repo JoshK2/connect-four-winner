@@ -55,10 +55,11 @@ namespace ConnectFourWinner
             int winner = -1;//is now one win tha game
             int match;
 
-            match = 0;
+           
             //check Horizontal
             for (int c = 0; c < columns; c++)
             {
+                 match = 0;
                 int currentValue = matrix[lastRow, c];
                 if (currentValue == lastValue)
                     match++;
@@ -75,10 +76,11 @@ namespace ConnectFourWinner
                 return winner;
             }
 
-            match = 0;
+            
             //check Vertical
             for (int r = 0; r < rows; r++)
             {
+                match = 0;
                 int currentValue = matrix[r, lastColumn];
                 if (currentValue == lastValue)
                     match++;
@@ -96,9 +98,9 @@ namespace ConnectFourWinner
             }
 
             //check diagonal top-left to bottom-right - include middle
-            match = 0;
             for (int r = 0; r <= rows - 4; r++)
             {
+                match = 0;
                 int rowPosition = r;
                 for (int column = 0; column < columns && rowPosition < rows; column++)
                 {
@@ -122,9 +124,9 @@ namespace ConnectFourWinner
             }
 
             //check diagonal top-left to bottom-right - after middle
-            match = 0;
             for (int c = 1; c <= columns - 4; c++)
             {
+                match = 0;
                 int columnPosition = c;
                 for (int row = 0; row < rows && columnPosition < columns; row++)
                 {
@@ -149,9 +151,9 @@ namespace ConnectFourWinner
 
 
             //check diagonal bottom-left to top-right - include middle
-            match = 0;
             for (int r = rows - 1; r >= rows - 4; r--)
             {
+                match = 0;
                 int rowPosition = r;
                 for (int column = 0; column < columns && rowPosition < rows && rowPosition >= 0; column++)
                 {
@@ -176,9 +178,9 @@ namespace ConnectFourWinner
 
 
             //check diagonal bottom-left to top-right - after middle
-            match = 0;
             for (int c = 1; c < columns; c++)
             {
+                match = 0;
                 int columnPosition = c;
                 for (int row = rows - 1; row < rows && columnPosition < columns && columnPosition >= 1; row--)
                 {
