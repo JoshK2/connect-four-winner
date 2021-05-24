@@ -57,9 +57,10 @@ namespace ConnectFourWinner
 
            
             //check Horizontal
+            match = 0;
             for (int c = 0; c < columns; c++)
             {
-                 match = 0;
+                
                 int currentValue = matrix[lastRow, c];
                 if (currentValue == lastValue)
                     match++;
@@ -78,9 +79,10 @@ namespace ConnectFourWinner
 
             
             //check Vertical
+            match = 0;
             for (int r = 0; r < rows; r++)
             {
-                match = 0;
+                
                 int currentValue = matrix[r, lastColumn];
                 if (currentValue == lastValue)
                     match++;
